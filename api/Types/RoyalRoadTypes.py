@@ -26,7 +26,7 @@ class RoyalRoadChapter():
 
 class RoyalRoadBook():
     def __init__(self, id):
-        self.id = id
+        self.id = int(id)
         self.slug = None
         self.title = None
         self.description = None
