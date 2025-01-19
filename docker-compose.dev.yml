@@ -1,0 +1,17 @@
+services:
+  fan-fic-epub-generator:
+    build :
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      LOG_LEVEL: DEBUG
+      UPDATE_INTERVAL_MINUTES: 5
+      ROYAL_ROAD_DOWNLOAD_FILE: ./test/files/fiction_ids_valid_rr.txt
+      INGEST_DIR: /cwa-book-ingest
+    restart: unless-stopped
+    volumes:
+    # This is where the books will be downloaded to, usually it would be 
+    # the same as whatever you gave in "calibre-web-automated"
+      - /tmp/data/calibre-web/ingest:${INGEST_DIR:-/cwa-book-ingest}

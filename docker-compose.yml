@@ -1,0 +1,14 @@
+# If you change the FLASK_PORT, do not forget to change it in ports and healthcheck as well.
+services:
+  fan-fic-epub-generator:
+    image: ghcr.io/CalvesGEH/FanFicEpubGenerator:latest
+    environment:
+      INGEST_DIR: /cwa-book-ingest
+      ROYAL_ROAD_DOWNLOAD_FOLLOWS: "False" # Needs to be in quotes.
+      ROYAL_ROAD_EMAIL: <YOUR_ROYALROAD_EMAIL>
+      ROYAL_ROAD_PASSWORD: <YOUR_ROYALROAD_PASSWORD>
+    restart: unless-stopped
+    volumes:
+    # This is where the books will be downloaded to, usually it would be 
+    # the same as whatever you gave in "calibre-web-automated"
+      - ./data/cwa-book-ingest:${INGEST_DIR:-/cwa-book-ingest}
