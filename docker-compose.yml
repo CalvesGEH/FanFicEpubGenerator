@@ -1,7 +1,6 @@
-# If you change the FLASK_PORT, do not forget to change it in ports and healthcheck as well.
 services:
   fan-fic-epub-generator:
-    image: ghcr.io/CalvesGEH/FanFicEpubGenerator:latest
+    image: ghcr.io/calvesgeh/fanficepubgenerator:latest
     environment:
       INGEST_DIR: /cwa-book-ingest
       ROYAL_ROAD_DOWNLOAD_FOLLOWS: "False" # Needs to be in quotes.
