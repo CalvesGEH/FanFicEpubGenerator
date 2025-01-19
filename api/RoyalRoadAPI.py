@@ -181,7 +181,7 @@ class RoyalRoadAPI():
             log.error("Failed to get followed fictions. Request failed.")
             return None
         fiction_href_tags = [i.a['href'] for i in soup.find_all('h2', class_='fiction-title')]
-        return [i.split('/')[-2] for i in fiction_href_tags] # These are in format of '/fiction/12345/fiction-slug'
+        return [int(i.split('/')[-2]) for i in fiction_href_tags] # These are in format of '/fiction/12345/fiction-slug'
 
 
     def get_full_fiction(self, fiction_id) -> RoyalRoadBook | None:
