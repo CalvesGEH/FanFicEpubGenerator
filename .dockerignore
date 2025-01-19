@@ -1,0 +1,16 @@
+.env
+README.md
+.gitignore
+Dockerfile
+
+# Testing Folder/Files
+cwa-book-ingest/
+*.epub
+
+# Python
+venv
+**__pycache__
+
+# Images
+*.png
+*.jpg
