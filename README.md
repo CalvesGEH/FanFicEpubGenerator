@@ -20,7 +20,7 @@ Currently only supports RoyalRoad.
    curl -O https://raw.githubusercontent.com/CalvesGEH/FanFicEpubGenerator/refs/heads/main/docker-compose.yml
    ```
 
-2. Configure the downloaded `docker-compose.yml` file following the [Configuration](#:wrench:-configuration) section.
+2. Configure the downloaded `docker-compose.yml` file following the [Configuration](#configuration) section.
 
 3. Start the service:
 
