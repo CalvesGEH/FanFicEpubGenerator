@@ -14,8 +14,7 @@ class RoyalRoadEpubConfig():
 
         # This is used to limit the number of threads that can run at once while downloading chapters.
         # Can be raised/lowered as needed. More threads will download chapters faster, but will get throttled by the server.
-        self.MAX_NUM_THREADS = 2
-        self.MIN_TIME_BETWEEN_REQUESTS_SECONDS = 1 # Minimum time between requests in seconds. This is to prevent getting throttled by the server.
+        self.MAX_NUM_THREADS = 1
 
         self.LOG_LEVEL = logging.INFO
 

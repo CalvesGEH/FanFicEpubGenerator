@@ -1,5 +1,5 @@
 services:
-  FanFicEpubGenerator:
+  fan-fic-epub-generator:
     build :
       context: .
       dockerfile: Dockerfile
